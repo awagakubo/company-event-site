@@ -27,9 +27,10 @@ npm run preview
 ```
 でローカル確認ができます。
 
-## デプロイ候補
-- GitHub Pages: `npm run build` → `dist/` を `gh-pages` ブランチに配信。
-- Vercel / Netlify: レポジトリを接続し、ビルドコマンドを `npm run build`、出力を `dist` に設定。
+## デプロイ (GitHub Pages)
+1. GitHubリポジトリの **Settings → Pages** で「Build and deployment」を *GitHub Actions* に設定。
+2. `main` ブランチへ push すると `.github/workflows/deploy.yml` が実行され、`dist/` を GitHub Pages に自動公開します。
+3. 初回は Actions タブで `Deploy to GitHub Pages` ワークフローの完了を確認し、Pages の公開URL (通常は `https://awagakubo.github.io/company-event-site/`) が有効になっているかチェックしてください。
 
 ## ページ構成
 - Hero: イベントの概要とCTA
